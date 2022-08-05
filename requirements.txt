@@ -1,0 +1,6 @@
+aiohttp
+hachoir
+Pillow
+requests
+tgcrypto
+yt-dlp
