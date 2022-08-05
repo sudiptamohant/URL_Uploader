@@ -68,8 +68,8 @@ async def youtube_dl_call_back(bot, update):
     )
     description = Translation.CUSTOM_CAPTION_UL_FILE
     if "fulltitle" in response_json:
-        description = response_json["fulltitle"][0:1021]
-        # escape Markdown and special characters
+        description = response_json["fulltitle"][:1021]
+            # escape Markdown and special characters
     tmp_directory_for_each_user = os.path.join(
         DOWNLOAD_LOCATION,
         str(update.from_user.id),
@@ -97,7 +97,7 @@ async def youtube_dl_call_back(bot, update):
     else:
         minus_f_format = youtube_dl_format
         if "youtu" in youtube_dl_url:
-            minus_f_format = youtube_dl_format + "+bestaudio"
+            minus_f_format = f"{youtube_dl_format}+bestaudio"
         command_to_exec = [
             "yt-dlp",
             "-c",
@@ -116,9 +116,7 @@ async def youtube_dl_call_back(bot, update):
     if youtube_dl_password is not None:
         command_to_exec.append("--password")
         command_to_exec.append(youtube_dl_password)
-    command_to_exec.append("--no-warnings")
-    # command_to_exec.append("--quiet")
-    command_to_exec.append("--restrict-filenames")
+    command_to_exec.extend(("--no-warnings", "--restrict-filenames"))
     logger.info(command_to_exec)
     start = datetime.now()
     t_response, e_response = await run_shell_command(command_to_exec)
@@ -183,9 +181,8 @@ async def youtube_dl_call_back(bot, update):
                 duration = 0
                 if tg_send_type != "file":
                     metadata = extractMetadata(createParser(current_file_name))
-                    if metadata is not None:
-                        if metadata.has("duration"):
-                            duration = metadata.get('duration').seconds
+                    if metadata is not None and metadata.has("duration"):
+                        duration = metadata.get('duration').seconds
                 # get the correct width, height, and duration
                 # for videos greater than 10MB
                 if os.path.exists(thumb_image_path):
