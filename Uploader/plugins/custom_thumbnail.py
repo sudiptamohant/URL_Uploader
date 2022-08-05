@@ -36,9 +36,9 @@ async def save_photo(bot, update):
         return
     # received single photo
     download_location = os.path.join(
-        DOWNLOAD_LOCATION,
-        str(update.from_user.id) + ".jpg"
+        DOWNLOAD_LOCATION, f"{str(update.from_user.id)}.jpg"
     )
+
     await bot.download_media(
         message=update,
         file_name=download_location
@@ -64,8 +64,8 @@ async def delete_thumbnail(bot, update):
         str(update.from_user.id)
     )
     try:
-        os.remove(download_location + ".jpg")
-        # os.remove(download_location + ".json")
+        os.remove(f"{download_location}.jpg")
+            # os.remove(download_location + ".json")
     except:
         pass
     await bot.send_message(

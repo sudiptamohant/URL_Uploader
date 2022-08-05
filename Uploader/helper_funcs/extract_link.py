@@ -45,7 +45,6 @@ def get_link(update):
                 url = entity.url
             elif entity.type == "url":
                 o_ = entity.offset
-                l_ = entity.length
-                url = url[o_:o_ + l_]
+                url = url[o_:o_ + entity.length]
 
     return url, file_name, youtube_dl_username, youtube_dl_password

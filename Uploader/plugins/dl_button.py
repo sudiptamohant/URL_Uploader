@@ -119,9 +119,8 @@ async def ddl_call_back(bot, update):
             duration = 0
             if tg_send_type != "file":
                 metadata = extractMetadata(createParser(download_directory))
-                if metadata is not None:
-                    if metadata.has("duration"):
-                        duration = metadata.get('duration').seconds
+                if metadata is not None and metadata.has("duration"):
+                    duration = metadata.get('duration').seconds
             # get the correct width, height, and duration
             # for videos greater than 10MB
             if os.path.exists(thumb_image_path):
@@ -285,5 +284,4 @@ ETA: {}
                             display_message = current_message
                     except Exception as e:
                         LOGGER.info(str(e))
-                        pass
         return await response.release()
