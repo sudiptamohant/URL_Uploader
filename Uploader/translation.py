@@ -1,23 +1,22 @@
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 class Translation:
-    START_TEXT = """
-    Hi {} 
-
-    I am Powerful Url Uploader Bot
+    START_TEXT = (
+    "Hi {} ,\n\n"
+    "I'm a Telegram URL Uploader Bot!"
+    )
     
-    """
-    ABOUT_TEXT = """
+    ABOUT_TEXT = (
+        "**Creater:** [Divarion-D](https://t.me/Divarion_D)\n\n"
+        "**Language:** [Python3](https://www.python.org)\n\n"
+        "**Library:** [Pyrogram](https://docs.pyrogram.org)\n\n"
+        "**Source Code:** [Click here](https://github.com/Divarion-D/URL_Uploader)"
+    )
 
-    **Creater:** [Divarion-D](https://t.me/Divarion_D)
-
-    **Language:** [Python3](https://www.python.org)
-
-    **Library:** [Pyrogram](https://docs.pyrogram.org)
-
-    **Source Code:** [Click here]()
-
-    """
+    HELP_TEXT = (
+        "Send Me Any Direct Download Link\n"
+        "I Can Upload To Telegram as File/Video"
+    )
 
     FORMAT_SELECTION = "Select the desired format: <a href='{}'>file size might be approximate</a> \nIf you want to set custom thumbnail, send photo before or quickly after tapping on any of the below buttons.\nYou can use /deletethumbnail to delete the auto-generated thumbnail."
     SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:

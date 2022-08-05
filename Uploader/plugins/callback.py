@@ -21,7 +21,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 @Client.on_callback_query()
 async def button(bot, update):
-    if update.data == "home":
+    if update.data == "start":
         await update.message.edit(
             text=Translation.START_TEXT.format(update.from_user.mention),
             reply_markup=Translation.START_BUTTONS,
@@ -29,7 +29,7 @@ async def button(bot, update):
         )
     elif update.data == "help":
         await update.message.edit(
-            text=Translation.START_TEXT.format(update.from_user.mention),
+            text=Translation.HELP_TEXT,
             reply_markup=Translation.HELP_BUTTONS,
             # disable_web_page_preview=True
         )
