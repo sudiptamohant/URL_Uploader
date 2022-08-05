@@ -11,7 +11,7 @@ This is complete url uploader bot. for host use [heroku](https://dashboard.herok
 #### Deploy To VPS
 
 ```
-git clone https://github.com/kalanakt/All-Url-Uploader
+git clone https://github.com/Divarion-D/All-Url-Uploader
 pip3 install -U -r requirements.txt
 # Edit Uploader/sample_config.py with variables.
 python bot.py
@@ -23,7 +23,7 @@ This Bot is developed by using many github open source projects. credit goes to 
 
 ### License
 
-\[MIT\](https://opensource.org/licenses/MIT)  
+[MIT](https://opensource.org/licenses/MIT)  
 _Copyright (c) 2022-present_
 
 ### [@BotFather](https://telegram.dog/BotFather) Commands
