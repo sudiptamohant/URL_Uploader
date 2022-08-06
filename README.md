@@ -21,6 +21,7 @@ source venv/bin/activate
 export TG_BOT_TOKEN=Your Bot Token
 export APP_ID=Your APP ID
 export API_HASH=Your API HASH
+export OWNER_ID=Your ID
 pip3 install -r requirements.txt
 python bot.py
 ```
