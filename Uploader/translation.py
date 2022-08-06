@@ -15,12 +15,26 @@ class Translation:
 
     HELP_TEXT = (
         "Send Me Any Direct Download Link\n"
-        "I Can Upload To Telegram as File/Video"
+        "I Can Upload To Telegram as File/Video\n\n"
+        "Or send me media to upload on Anonfile"
     )
 
     FORMAT_SELECTION = "Select the desired format: <a href='{}'>file size might be approximate</a> \nIf you want to set custom thumbnail, send photo before or quickly after tapping on any of the below buttons.\nYou can use /deletethumbnail to delete the auto-generated thumbnail."
     SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:
 URL | filename | username | password"""
+    AONFILE_UPLOAD_SERVER_PROGRESS = (
+        "Upload progress started, Pleace Wait !\n"
+        "Its Take Time According to File Size\n" 
+        "ETA:"
+    )
+    ANONFILE_UPLOAD = "Uploading to Anonfile, Please Wait !"
+    ANONFILE_UPLOAD_SUCCESS = (
+        "<u>File Uploaded to Anonfile</u>\n\n"
+        "📂 File Name: {}\n\n"
+        "📦 File Size: {}\n\n"
+        "📥 Download Link: {}"
+    )
+
     DOWNLOAD_START = "trying to download"
     UPLOAD_START = "trying to upload"
     RCHD_TG_API_LIMIT = "I cannot upload files greater than 1.95GB due to Telegram API limitations."

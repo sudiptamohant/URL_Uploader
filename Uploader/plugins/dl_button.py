@@ -57,7 +57,7 @@ async def ddl_call_back(bot, update):
     await bot.edit_message_text(
         text=Translation.DOWNLOAD_START,
         chat_id=update.message.chat.id,
-        message_id=update.message.message_id
+        message_id=update.message.id
     )
     tmp_directory_for_each_user = os.path.join(
         DOWNLOAD_LOCATION,
@@ -79,14 +79,14 @@ async def ddl_call_back(bot, update):
                 youtube_dl_url,
                 download_directory,
                 update.message.chat.id,
-                update.message.message_id,
+                update.message.id,
                 c_time
             )
         except asyncio.TimeoutError:
             await bot.edit_message_text(
                 text=Translation.SLOW_URL_DECED,
                 chat_id=update.message.chat.id,
-                message_id=update.message.message_id
+                message_id=update.message.id
             )
             return False
     if os.path.exists(download_directory):
@@ -94,7 +94,7 @@ async def ddl_call_back(bot, update):
         await bot.edit_message_text(
             text=Translation.UPLOAD_START,
             chat_id=update.message.chat.id,
-            message_id=update.message.message_id
+            message_id=update.message.id
         )
         file_size = TG_MAX_FILE_SIZE + 1
         try:
@@ -108,7 +108,7 @@ async def ddl_call_back(bot, update):
             await bot.edit_message_text(
                 chat_id=update.message.chat.id,
                 text=Translation.RCHD_TG_API_LIMIT,
-                message_id=update.message.message_id
+                message_id=update.message.id
             )
         else:
             # get the correct width, height, and duration
@@ -217,7 +217,7 @@ async def ddl_call_back(bot, update):
         await bot.edit_message_text(
             text=Translation.NO_VOID_FORMAT_FOUND.format("Incorrect Link"),
             chat_id=update.message.chat.id,
-            message_id=update.message.message_id,
+            message_id=update.message.id,
             disable_web_page_preview=True
         )
 

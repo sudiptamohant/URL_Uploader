@@ -80,7 +80,7 @@ async def DownloadStickersBot(bot, update):
         # thumb=thumb_image_path,
         # caption=description,
         # reply_markup=reply_markup,
-        # reply_to_message_id=a.message_id,
+        # reply_to_message_id=a.id,
         progress=progress_for_pyrogram,
         progress_args=(
             Translation.UPLOAD_START,
@@ -93,7 +93,7 @@ async def DownloadStickersBot(bot, update):
         # thumb=thumb_image_path,
         # caption=description,
         # reply_markup=reply_markup,
-        # reply_to_message_id=a.message_id,
+        # reply_to_message_id=a.id,
         progress=progress_for_pyrogram,
         progress_args=(
             Translation.UPLOAD_START,

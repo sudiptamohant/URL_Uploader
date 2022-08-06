@@ -208,10 +208,9 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-config.py
-
 # to store the downloaded files
 /DOWNLOADS
+ANONFILE_UPLOADS/
 *.session
 *.session*
 *.DB

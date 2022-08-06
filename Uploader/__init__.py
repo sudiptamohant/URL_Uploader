@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # (c) Shrimadhav U K | Moded by @Divarion-D
 
-from Uploader.sample_config import Config
+from Uploader.config import Config
 
 
 # TODO: is there a better way?
@@ -11,6 +11,7 @@ APP_ID = Config.APP_ID
 API_HASH = Config.API_HASH
 AUTH_USERS = Config.AUTH_USERS
 DOWNLOAD_LOCATION = Config.DOWNLOAD_LOCATION
+UPLOADER_LOCATION = Config.UPLOADER_LOCATION
 MAX_FILE_SIZE = Config.MAX_FILE_SIZE
 TG_MAX_FILE_SIZE = Config.TG_MAX_FILE_SIZE
 CHUNK_SIZE = Config.CHUNK_SIZE

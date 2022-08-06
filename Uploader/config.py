@@ -6,15 +6,17 @@ class Config(object):
     TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
     # The Telegram API things
     APP_ID = int(os.environ.get("APP_ID", 12345))
-    API_HASH = os.environ.get("API_HASH", "b3d3c3b0b3b3c3b3b3b3b3b3b3b3b3b3")
+    API_HASH = os.environ.get("API_HASH", "")
     # Get these values from my.telegram.org
     OWNER_ID = int(os.environ.get("OWNER_ID", 1000000000))
     # Array to store users who are authorized to use the bot
     AUTH_USERS = list({int(x)
                       for x in os.environ.get("AUTH_USERS", "0").split()})
     AUTH_USERS.append(OWNER_ID)
-    # the download location, where the HTTP Server runs
+    # The download location, where the HTTP Server runs
     DOWNLOAD_LOCATION = "./DOWNLOADS"
+    # The anonfile upload location, where the HTTP Server runs
+    UPLOADER_LOCATION = "./ANONFILE_UPLOADS"
     # Telegram maximum file upload size
     MAX_FILE_SIZE = 50000000
     TG_MAX_FILE_SIZE = 2097152000

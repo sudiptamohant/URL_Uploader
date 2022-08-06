@@ -1,6 +1,7 @@
 aiohttp
 hachoir
 Pillow
+pyrogram
 requests
 tgcrypto
 yt-dlp

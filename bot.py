@@ -10,6 +10,7 @@ from Uploader import (
     APP_ID,
     API_HASH,
     DOWNLOAD_LOCATION,
+    UPLOADER_LOCATION,
     TG_BOT_TOKEN
 )
 
@@ -26,6 +27,9 @@ if __name__ == "__main__":
     # create download directory, if not exist
     if not os.path.isdir(DOWNLOAD_LOCATION):
         os.makedirs(DOWNLOAD_LOCATION)
+    # create download directory, if not exist
+    if not os.path.isdir(UPLOADER_LOCATION):
+        os.makedirs(UPLOADER_LOCATION)
     plugins = dict(
         root="Uploader/plugins"
     )

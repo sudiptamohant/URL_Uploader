@@ -220,7 +220,7 @@ async def echo(bot, update):
             128,
             None,  # bot,
             Translation.DOWNLOAD_START,
-            update.message_id,
+            update.id,
             update.chat.id
         )
         await update.reply_photo(
@@ -256,5 +256,5 @@ async def echo(bot, update):
             caption=Translation.FORMAT_SELECTION.format(""),
             reply_markup=reply_markup,
             parse_mode="html",
-            reply_to_message_id=update.message_id
+            reply_to_message_id=update.id
         )
